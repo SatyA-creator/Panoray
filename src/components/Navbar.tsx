@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Twitter, Linkedin } from "lucide-react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -23,7 +24,7 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-end h-20">
+        <div className="flex items-center justify-end h-20 gap-4">
           {/* Right: Contact Us Button */}
           <Link
             to="/contact"
@@ -31,6 +32,28 @@ const Navbar = () => {
           >
             Contact Us
           </Link>
+          
+          {/* Social Media Links */}
+          <div className="flex items-center gap-3">
+            <a
+              href="https://x.com/panorayventures"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors group"
+              aria-label="Twitter"
+            >
+              <Twitter size={16} className="text-primary" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/panoray-ventures/mycompany/verification/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors group"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={16} className="text-primary" />
+            </a>
+          </div>
         </div>
       </div>
 

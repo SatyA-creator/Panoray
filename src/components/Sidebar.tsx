@@ -59,7 +59,7 @@ const Sidebar = () => {
           <img 
             src="/logo_full_colored.png" 
             alt="Nova Growth Capital" 
-            className="h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
         </Link>
 

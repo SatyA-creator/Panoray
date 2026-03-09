@@ -7,9 +7,24 @@ import { motion } from "framer-motion";
 import { User, Linkedin, Twitter } from "lucide-react";
 
 const teamMembers = [
-  { name: "Pathanjali Sharma", title: "Founder & CEO", image: "/t1.jpeg" },
-  { name: "Mihir Londhe", title: "Co-Founder & COO", image: "/t2.jpeg" },
-  { name: "Nishchal Gaba", title: "Head of Partnerships", image: "/t3.jpeg" },
+  {
+    name: "Pathanjali Sharma",
+    title: "Founder & CEO",
+    image: "/t1.jpeg",
+    linkedin: "https://linkedin.com/in/pathanjali-sharma"
+  },
+  {
+    name: "Mihir Londhe",
+    title: "Co-Founder & COO",
+    image: "/t2.jpeg",
+    linkedin: "https://www.linkedin.com/in/mihir-londhe-143735169/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    name: "Nishchal Gaba",
+    title: "Head of Partnerships",
+    image: "/t3.jpeg",
+    linkedin: "https://www.linkedin.com/in/nishchal-gaba-295701a5/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  }
 ];
 
 const Team = () => {
@@ -56,49 +71,53 @@ const Team = () => {
     {teamMembers.map((member, i) => (
       <ScrollReveal key={member.name} delay={i * 0.12} scale>
 
-        <motion.div
-          whileHover={{ y: -6 }}
-          transition={{ duration: 0.35 }}
-          className="group relative bg-white border border-border rounded-xl overflow-hidden cursor-default shadow-sm hover:shadow-md transition-all duration-300"
-        >
+       <motion.div
+  whileHover={{ y: -10 }}
+  transition={{ duration: 0.35 }}
+  className="group relative bg-white border border-border rounded-2xl overflow-hidden cursor-default shadow-sm hover:shadow-xl transition-all duration-300"
+>
 
-          <div className="relative aspect-[3/2] bg-gradient-to-br from-teal-50 via-cyan-50/50 to-teal-100/30 flex items-center justify-center overflow-hidden">
+  {/* Image */}
+  <div className="relative h-[320px] overflow-hidden">
 
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_hsl(177_46%_53%_/_0.08),_transparent_60%)] group-hover:scale-150 transition-transform duration-1000" />
+    <img
+      src={member.image}
+      alt={member.name}
+      className="w-full h-full object-cover object-center scale-110 group-hover:scale-125 transition-transform duration-700"
+    />
 
-            <img 
-              src={member.image} 
-              alt={member.name}
-              className="w-full h-full object-cover"
-            />
+    {/* gradient overlay */}
+    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-80" />
 
-            <User className="fallback-icon hidden text-muted-foreground/20 group-hover:text-primary/30 transition-colors duration-700 absolute" size={70} />
+    {/* social icon */}
+    <div className="absolute bottom-4 right-4 flex gap-2">
 
-            {/* Hover overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-5 gap-3">
+      <a
+        href={member.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow hover:bg-primary hover:text-white transition"
+      >
+        <Linkedin size={16} />
+      </a>
 
-              <div className="w-9 h-9 rounded-full bg-white border border-border flex items-center justify-center hover:bg-primary/10 transition-colors">
-                <Linkedin size={15} className="text-primary" />
-              </div>
+    </div>
+  </div>
 
-              <div className="w-9 h-9 rounded-full bg-white border border-border flex items-center justify-center hover:bg-primary/10 transition-colors">
-                <Twitter size={15} className="text-primary" />
-              </div>
+  {/* Content */}
+  <div className="p-6 text-center">
 
-            </div>
-          </div>
+    <h3 className="text-xl font-display font-semibold group-hover:text-primary transition-colors">
+      {member.name}
+    </h3>
 
-          <div className="p-4">
-            <h3 className="text-lg font-display font-semibold group-hover:text-primary transition-colors duration-300">
-              {member.name}
-            </h3>
+    <p className="text-muted-foreground text-sm mt-1">
+      {member.title}
+    </p>
 
-            <p className="text-primary/70 text-sm mt-1 font-medium">
-              {member.title}
-            </p>
-          </div>
+  </div>
 
-        </motion.div>
+</motion.div>
 
       </ScrollReveal>
     ))}

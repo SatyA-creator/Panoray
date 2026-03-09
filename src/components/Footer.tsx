@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { Mail, MapPin, Twitter, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -15,11 +15,23 @@ const Footer = () => {
               Your Gateway to Web3 Success. We provide equity financing to startups and early-stage companies with high growth potential.
             </p>
             <div className="mt-6 flex gap-3">
-              <a href="#" className="w-10 h-10 rounded-xl bg-white border border-border flex items-center justify-center hover:bg-primary/10 transition-colors group">
-                <ArrowUpRight size={16} className="text-muted-foreground group-hover:text-primary transition-colors" />
+              <a
+                href="https://x.com/panorayventures"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-xl bg-white border border-border flex items-center justify-center hover:bg-primary/10 transition-colors group"
+                aria-label="Twitter"
+              >
+                <Twitter size={16} className="text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-xl bg-white border border-border flex items-center justify-center hover:bg-primary/10 transition-colors group">
-                <ArrowUpRight size={16} className="text-muted-foreground group-hover:text-primary transition-colors" />
+              <a
+                href="https://www.linkedin.com/company/panoray-ventures/mycompany/verification/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-xl bg-white border border-border flex items-center justify-center hover:bg-primary/10 transition-colors group"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={16} className="text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
             </div>
           </div>
