@@ -28,7 +28,7 @@ const Contact = () => {
       <Sidebar />
       <div className="flex-1">
         <Navbar />
-        <section className="relative pt-32 pb-32 px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-teal-50 via-white to-cyan-50">
+        <section className="relative pt-20 pb-12 px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-teal-50 via-white to-cyan-50">
         <FloatingOrbs />
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
@@ -40,7 +40,7 @@ const Contact = () => {
               >
                 <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-5 py-2 mb-8">
                   <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                  <span className="text-primary text-xs font-semibold tracking-wide uppercase">Get in Touch</span>
+                  <span className="text-primary text-sm font-semibold tracking-wide uppercase">Get in Touch</span>
                 </div>
               </motion.div>
               <motion.h1
@@ -89,7 +89,7 @@ const Contact = () => {
             </div>
 
             <ScrollReveal delay={0.2} direction="left">
-              <div className="lg:pt-32 space-y-8">
+              <div className="lg:pt-12 space-y-8">
                 <motion.div
                   whileHover={{ y: -4 }}
                   transition={{ duration: 0.3 }}
@@ -123,8 +123,8 @@ const Contact = () => {
                       <h3 className="text-lg font-display font-bold">Looking to Partner?</h3>
                       <ArrowUpRight className="text-primary/0 group-hover:text-primary transition-all duration-300" size={18} />
                     </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      Whether you're a startup seeking funding, a project looking for strategic guidance, or an investor interested in Web3 opportunities — we'd love to hear from you.
+                    <p className="text-muted-foreground text-base leading-relaxed">
+                      Whether you're a startup seeking funding, a project looking for strategic guidance, or an investor interested . we'd love to hear from you.
                     </p>
                   </div>
                 </motion.div>

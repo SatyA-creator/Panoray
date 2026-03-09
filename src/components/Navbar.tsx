@@ -17,10 +17,11 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      style={{ backgroundColor: '#000000ff' }}
       className={`w-full transition-all duration-500 ${
         scrolled 
-          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-border" 
-          : "bg-white/80 backdrop-blur-sm"
+          ? "shadow-sm border-b border-gray-800" 
+          : ""
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -39,19 +40,19 @@ const Navbar = () => {
               href="https://x.com/panorayventures"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors group"
+              className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary/30 transition-colors group"
               aria-label="Twitter"
             >
-              <Twitter size={16} className="text-primary" />
+              <Twitter size={16} className="text-white" />
             </a>
             <a
               href="https://www.linkedin.com/company/panoray-ventures/mycompany/verification/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors group"
+              className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary/30 transition-colors group"
               aria-label="LinkedIn"
             >
-              <Linkedin size={16} className="text-primary" />
+              <Linkedin size={16} className="text-white" />
             </a>
           </div>
         </div>

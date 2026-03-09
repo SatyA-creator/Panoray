@@ -48,21 +48,9 @@ const Sidebar = () => {
 
       {/* Sidebar */}
       <aside
-        className={`fixed left-0 top-0 h-screen w-[90px] bg-white z-50 flex flex-col items-center shadow-2xl transition-transform duration-300
+        className={`fixed left-0 top-0 h-screen w-[90px] bg-black z-50 flex flex-col items-center shadow-2xl transition-transform duration-300
         ${isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}`}
       >
-        {/* Logo */}
-        <Link
-          to="/"
-          className="flex items-center justify-center h-24 border-b w-full group"
-        >
-          <img 
-            src="/logo_full_colored.png" 
-            alt="Nova Growth Capital" 
-            className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-          />
-        </Link>
-
         {/* Icons */}
         <nav className="flex flex-col items-center gap-6 mt-10">
           {navLinks.map((link, i) => {
@@ -84,7 +72,7 @@ const Sidebar = () => {
                   ${
                     active
                       ? "border-[#49c2bf] bg-[#49c2bf] text-white shadow-lg"
-                      : "border-[#49c2bf] text-gray-700 hover:bg-[#49c2bf] hover:text-white"
+                      : "border-gray-700 text-gray-400 hover:border-[#49c2bf] hover:bg-[#49c2bf] hover:text-white"
                   }`}
                 >
                   <Icon size={22} />

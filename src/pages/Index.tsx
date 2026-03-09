@@ -13,6 +13,7 @@ import StudioFundSection from "@/components/home/StudioFundSection";
 import SpecializationsSection from "@/components/home/SpecializationsSection";
 import FocusAreasSection from "@/components/home/FocusAreasSection";
 import StatsSection from "@/components/home/StatsSection";
+// import MarqueeSection from "@/components/home/MarqueeSection";
 
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
       <div className="flex-1">
         <Navbar />
         <HeroSection />
+        {/* <MarqueeSection /> */}
         <StatsSection />
         <MissionSection />
         <StudioFundSection />

@@ -9,19 +9,19 @@ import { User, Linkedin, Twitter } from "lucide-react";
 const teamMembers = [
   {
     name: "Pathanjali Sharma",
-    title: "Founder & CEO",
+    title: "Co-Founder and Managing Partner ",
     image: "/t1.jpeg",
     linkedin: "https://linkedin.com/in/pathanjali-sharma"
   },
   {
     name: "Mihir Londhe",
-    title: "Co-Founder & COO",
+    title: "Senior Manager, Business Development and Operations",
     image: "/t2.jpeg",
     linkedin: "https://www.linkedin.com/in/mihir-londhe-143735169/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
   {
     name: "Nishchal Gaba",
-    title: "Head of Partnerships",
+    title: "Technical Advisor",
     image: "/t3.jpeg",
     linkedin: "https://www.linkedin.com/in/nishchal-gaba-295701a5/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   }
@@ -33,7 +33,7 @@ const Team = () => {
       <Sidebar />
       <div className="flex-1">
         <Navbar />
-        <section className="relative pt-32 pb-20 px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-teal-50 via-white to-cyan-50">
+        <section className="relative pt-20 pb-10 px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-teal-50 via-white to-cyan-50">
         <FloatingOrbs />
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <motion.div
@@ -43,7 +43,7 @@ const Team = () => {
           >
             <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-5 py-2 mb-8">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-primary text-xs font-semibold tracking-wide uppercase">Our People</span>
+              <span className="text-primary text-sm font-semibold tracking-wide uppercase">Our People</span>
             </div>
           </motion.div>
           <motion.h1
@@ -52,7 +52,7 @@ const Team = () => {
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-[0.95]"
           >
-            Our Team:<br /><span className="text-[#49c2bf]">Web3 Experts</span>
+            Our Team:<br /><span className="text-[#49c2bf]"> Experts</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -60,12 +60,12 @@ const Team = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-8 text-lg text-muted-foreground max-w-xl mx-auto"
           >
-            A passionate team of Web3 professionals dedicated to building the future of decentralized technology.
+            A passionate team of professionals dedicated to building the future of decentralized technology.
           </motion.p>
         </div>
       </section>
 
-    <section className="pb-32 px-6 lg:px-8 bg-white">
+    <section className="pb-12 px-6 lg:px-8 bg-white">
   <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
     {teamMembers.map((member, i) => (
@@ -111,7 +111,7 @@ const Team = () => {
       {member.name}
     </h3>
 
-    <p className="text-muted-foreground text-sm mt-1">
+    <p className="text-muted-foreground text-base mt-1">
       {member.title}
     </p>
 

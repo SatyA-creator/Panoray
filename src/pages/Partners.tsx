@@ -38,7 +38,7 @@ const Partners = () => {
       <Sidebar />
       <div className="flex-1">
         <Navbar />
-        <section className="relative pt-32 pb-20 px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-teal-50 via-white to-cyan-50">
+        <section className="relative pt-20 pb-10 px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-teal-50 via-white to-cyan-50">
         <FloatingOrbs />
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <motion.div
@@ -48,7 +48,7 @@ const Partners = () => {
           >
             <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-5 py-2 mb-8">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-primary text-xs font-semibold tracking-wide uppercase">Ecosystem</span>
+              <span className="text-primary text-sm font-semibold tracking-wide uppercase">Ecosystem</span>
             </div>
           </motion.div>
           <motion.h1
@@ -63,12 +63,12 @@ const Partners = () => {
       </section>
 
       {/* Grid */}
-      <section className="py-32 px-6 lg:px-8 bg-white">
+      <section className="py-12 px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
-            <div className="text-center mb-20">
-              <p className="text-primary uppercase tracking-widest text-xs font-semibold mb-4">Network</p>
-              <h2 className="text-3xl md:text-5xl font-display font-bold">
+            <div className="text-center mb-8">
+              <p className="text-primary uppercase tracking-widest text-sm font-semibold mb-4">Network</p>
+              <h2 className="text-4xl md:text-6xl font-display font-bold">
                 Strategic Partners & <span className="text-[#49c2bf]">Collaborators</span>
               </h2>
             </div>

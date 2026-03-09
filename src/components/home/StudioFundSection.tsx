@@ -20,13 +20,13 @@ const BlockItem = ({ block, index }: { block: typeof studioBlocks[0]; index: num
       transition={{ duration: 0.3 }}
       className="group flex gap-6 py-6 border-b border-border last:border-b-0 cursor-default"
     >
-      <span className="text-[#49c2bfff] font-display font-bold text-sm mt-1 shrink-0">{block.number}</span>
+      <span className="text-[#49c2bfff] font-display font-bold text-base mt-1 shrink-0">{block.number}</span>
       <div>
-        <h3 className="text-lg font-semibold font-display mb-2 group-hover:text-primary transition-colors duration-300">
+        <h3 className="text-xl font-semibold font-display mb-2 group-hover:text-primary transition-colors duration-300">
           {block.title}
           <ArrowRight className="inline ml-2 opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-2 group-hover:translate-x-0" size={16} />
         </h3>
-        <p className="text-muted-foreground text-sm leading-relaxed">{block.desc}</p>
+        <p className="text-muted-foreground text-base leading-relaxed">{block.desc}</p>
       </div>
     </motion.div>
   </ScrollReveal>
@@ -35,20 +35,32 @@ const BlockItem = ({ block, index }: { block: typeof studioBlocks[0]; index: num
 const StudioFundSection = () => (
   <>
     {/* Venture Studio */}
-    <section className="py-32 lg:py-40 px-6 lg:px-8 relative bg-gradient-to-br from-teal-50/50 via-white to-cyan-50/50">
+    <section className="py-12 lg:py-14 px-6 lg:px-8 relative bg-gradient-to-br from-teal-50/50 via-white to-cyan-50/50">
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-16 lg:gap-24 items-start">
+          {/* Image on Left */}
           <ScrollReveal>
-            <div className="lg:sticky lg:top-32">
-              <p className="text-primary uppercase tracking-widest text-xs font-semibold mb-4 line-glow">Venture Studio</p>
-              <h2 className="text-4xl md:text-6xl font-display font-bold leading-tight">
-                We Help Build<br />
-                <span className="text-gradient">Companies</span>
-              </h2>
-              <div className="mt-8 w-24 h-[2px] bg-gradient-to-r from-primary to-transparent rounded-full" />
-            </div>
+            <motion.img
+              src="/trust1.png"
+              alt="Venture Studio"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="max-w-full h-auto"
+            />
           </ScrollReveal>
+          
+          {/* Content on Right */}
           <div>
+            <ScrollReveal>
+              <p className="text-primary uppercase tracking-widest text-sm font-semibold mb-4 line-glow">Venture Studio</p>
+              <h2 className="text-5xl md:text-7xl font-display font-bold leading-tight">
+                We Help Build 
+                <span className="text-gradient"> Companies</span>
+              </h2>
+              <div className="mt-8 mb-8 w-24 h-[2px] bg-gradient-to-r from-primary to-transparent rounded-full" />
+            </ScrollReveal>
+            
             {studioBlocks.map((block, i) => (
               <BlockItem key={block.title} block={block} index={i} />
             ))}
@@ -58,24 +70,36 @@ const StudioFundSection = () => (
     </section>
 
     {/* Venture Fund */}
-    <section className="py-32 lg:py-40 px-6 lg:px-8 relative bg-white">
+    <section className="py-6 lg:py-8 px-6 lg:px-8 relative bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-          <ScrollReveal>
-            <div className="lg:sticky lg:top-32">
-              <p className="text-primary uppercase tracking-widest text-xs font-semibold mb-4 line-glow">Venture Fund</p>
-              <h2 className="text-4xl md:text-6xl font-display font-bold leading-tight">
+          {/* Content on Left */}
+          <div>
+            <ScrollReveal>
+              <p className="text-primary uppercase tracking-widest text-sm font-semibold mb-4 line-glow">Venture Fund</p>
+              <h2 className="text-5xl md:text-7xl font-display font-bold leading-tight">
                 We Invest in<br />
                 <span className="text-gradient">Great Ideas</span>
               </h2>
-              <div className="mt-8 w-24 h-[2px] bg-gradient-to-r from-primary to-transparent rounded-full" />
-            </div>
-          </ScrollReveal>
-          <div>
+              <div className="mt-8 mb-8 w-24 h-[2px] bg-gradient-to-r from-primary to-transparent rounded-full" />
+            </ScrollReveal>
+            
             {fundBlocks.map((block, i) => (
               <BlockItem key={block.title} block={block} index={i} />
             ))}
           </div>
+          
+          {/* Image on Right */}
+          <ScrollReveal>
+            <motion.img
+              src="/fund.jpg"
+              alt="Venture Fund"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="max-w-full h-auto"
+            />
+          </ScrollReveal>
         </div>
       </div>
     </section>

@@ -14,7 +14,7 @@ const specializations = [
 ];
 
 const SpecializationsSection = () => (
-  <section className="py-32 lg:py-40 px-6 lg:px-8 relative overflow-hidden bg-white">
+  <section className="py-12 lg:py-14 px-6 lg:px-8 relative overflow-hidden bg-white">
 
     <div className="absolute inset-0 bg-gradient-to-b from-teal-50/30 via-cyan-50/20 to-teal-50/30" />
 
@@ -25,12 +25,12 @@ const SpecializationsSection = () => (
     <div className="max-w-7xl mx-auto relative z-10">
 
       <ScrollReveal>
-        <div className="text-center mb-20">
-          <p className="text-primary uppercase tracking-widest text-xs font-semibold mb-4">
+        <div className="text-center mb-8">
+          <p className="text-primary uppercase tracking-widest text-sm font-semibold mb-4">
             What We Do
           </p>
 
-          <h2 className="text-4xl md:text-6xl font-display font-semibold">
+          <h2 className="text-5xl md:text-7xl font-display font-semibold">
             Our <span className="text-gradient">Specializations</span>
           </h2>
         </div>
@@ -56,6 +56,16 @@ const SpecializationsSection = () => (
                 {/* Hover glow */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-br from-primary/10 via-transparent to-primary/10" />
 
+                {/* Number Badge with Line */}
+                <div className="relative flex items-center gap-3 mb-6">
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#a8d645] to-[#91c13a] flex items-center justify-center shadow-md">
+                    <span className="text-lg font-bold text-gray-800">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                  </div>
+                  <div className="flex-1 h-[2px] bg-gradient-to-r from-gray-300 to-transparent" />
+                </div>
+
                 {/* ICON */}
                 <div className="flex items-center gap-4 mb-4">
 
@@ -66,14 +76,14 @@ const SpecializationsSection = () => (
                     <spec.icon className="text-primary" size={20} />
                   </motion.div>
 
-                  <h3 className="text-base font-display font-semibold group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-lg font-display font-semibold group-hover:text-primary transition-colors duration-300">
                     {spec.title}
                   </h3>
 
                 </div>
 
                 {/* DESCRIPTION */}
-                <p className="text-muted-foreground text-sm leading-relaxed flex-1">
+                <p className="text-muted-foreground text-base leading-relaxed flex-1">
                   {spec.desc}
                 </p>
 
