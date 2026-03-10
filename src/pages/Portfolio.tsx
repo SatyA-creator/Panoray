@@ -56,7 +56,7 @@ const Portfolio = () => {
         </div>
       </section>
 
-      <section className="pb-12 px-6 lg:px-8 bg-white">
+      <section className="pb-12 px-6 lg:px-8 bg-gradient-to-br from-teal-50 via-white to-cyan-50">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
           {portfolioCompanies.map((company, i) => (
             <ScrollReveal key={company.name} delay={i * 0.08} scale>

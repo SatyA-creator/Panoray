@@ -14,9 +14,9 @@ const specializations = [
 ];
 
 const SpecializationsSection = () => (
-  <section className="py-12 lg:py-14 px-6 lg:px-8 relative overflow-hidden bg-white">
+  <section className="py-12 lg:py-14 px-6 lg:px-8 relative overflow-hidden bg-gradient-to-br from-teal-50 via-white to-cyan-50">
 
-    <div className="absolute inset-0 bg-gradient-to-b from-teal-50/30 via-cyan-50/20 to-teal-50/30" />
+
 
     {/* Decorative circles */}
     <div className="absolute -right-40 top-1/3 w-80 h-80 rounded-full border border-primary/5 animate-float-slower" />

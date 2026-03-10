@@ -11,7 +11,7 @@ const benefits = [
 ];
 
 const BenefitsSection = () => (
-  <section className="py-32 lg:py-40 px-6 lg:px-8 relative bg-white overflow-hidden">
+  <section className="py-32 lg:py-40 px-6 lg:px-8 relative bg-gradient-to-br from-teal-50 via-white to-cyan-50 overflow-hidden">
     <div className="max-w-7xl mx-auto">
       <ScrollReveal>
         <div className="text-center mb-20">

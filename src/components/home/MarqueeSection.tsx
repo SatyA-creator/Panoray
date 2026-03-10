@@ -1,6 +1,6 @@
 const MarqueeSection = () => {
   return (
-    <section className="py-8 bg-white overflow-hidden">
+    <section className="py-8 bg-gradient-to-br from-teal-50 via-white to-cyan-50 overflow-hidden">
       <div className="animate-marquee flex gap-12 whitespace-nowrap">
         {[...Array(20)].map((_, i) => (
           <h2

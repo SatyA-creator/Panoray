@@ -35,7 +35,7 @@ const BlockItem = ({ block, index }: { block: typeof studioBlocks[0]; index: num
 const StudioFundSection = () => (
   <>
     {/* Venture Studio */}
-    <section className="py-12 lg:py-14 px-6 lg:px-8 relative bg-gradient-to-br from-teal-50/50 via-white to-cyan-50/50">
+    <section className="py-12 lg:py-14 px-6 lg:px-8 relative bg-gradient-to-br from-teal-50 via-white to-cyan-50">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-16 lg:gap-24 items-start">
           {/* Image on Left */}
@@ -70,7 +70,7 @@ const StudioFundSection = () => (
     </section>
 
     {/* Venture Fund */}
-    <section className="py-6 lg:py-8 px-6 lg:px-8 relative bg-white">
+    <section className="py-6 lg:py-8 px-6 lg:px-8 relative bg-gradient-to-br from-teal-50 via-white to-cyan-50">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           {/* Content on Left */}
@@ -92,7 +92,7 @@ const StudioFundSection = () => (
           {/* Image on Right */}
           <ScrollReveal>
             <motion.img
-              src="/fund.jpg"
+              src="/funds.png"
               alt="Venture Fund"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}

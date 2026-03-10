@@ -28,9 +28,9 @@ const Sidebar = () => {
       {/* Mobile Toggle */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="lg:hidden fixed top-6 left-6 z-[60] bg-primary text-white p-3 rounded-full shadow-lg"
+        className="lg:hidden fixed top-4 left-4 sm:top-6 sm:left-6 z-[60] text-[#49c2bf] p-2 sm:p-3"
       >
-        {isOpen ? <X size={24} /> : <Menu size={24} />}
+        {isOpen ? <X size={20} /> : <Menu size={20} />}
       </button>
 
       {/* Mobile Overlay */}
@@ -48,48 +48,67 @@ const Sidebar = () => {
 
       {/* Sidebar */}
       <aside
-        className={`fixed left-0 top-0 h-screen w-[90px] bg-black z-50 flex flex-col items-center shadow-2xl transition-transform duration-300
+        className={`fixed left-0 top-0 h-screen w-[70px] sm:w-[90px] z-50 flex flex-col items-center transition-transform duration-300
         ${isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}`}
       >
-        {/* Icons */}
-        <nav className="flex flex-col items-center gap-6 mt-10">
-          {navLinks.map((link, i) => {
-            const Icon = link.icon;
-            const active = location.pathname === link.path;
 
-            return (
-              <motion.div
-                key={link.path}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                className="group relative"
-              >
-                <Link
-                  to={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`flex items-center justify-center w-14 h-14 rounded-xl border-2 transition-all duration-300
-                  ${
-                    active
-                      ? "border-[#49c2bf] bg-[#49c2bf] text-white shadow-lg"
-                      : "border-gray-700 text-gray-400 hover:border-[#49c2bf] hover:bg-[#49c2bf] hover:text-white"
-                  }`}
+        {/* Logo */}
+        <div className="mt-6">
+          <Link to="/">
+            <img
+              src="/logo_full.png"
+              alt="Logo"
+              className="w-14 sm:w-16 lg:w-20"
+            />
+          </Link>
+        </div>
+
+        {/* Centered Navigation */}
+        <nav className="flex-1 flex items-center justify-center">
+          <div className="flex flex-col items-center gap-8">
+            {navLinks.map((link, i) => {
+              const Icon = link.icon;
+              const active = location.pathname === link.path;
+
+              return (
+                <motion.div
+                  key={link.path}
+                  initial={{ opacity: 0, x: -50, rotateY: -90 }}
+                  animate={{ opacity: 1, x: 0, rotateY: 0 }}
+                  transition={{
+                    delay: i * 0.1,
+                    duration: 0.6,
+                    ease: [0.22, 1, 0.36, 1]
+                  }}
+                  className="group relative"
                 >
-                  <Icon size={22} />
-                </Link>
+                  <Link
+                    to={link.path}
+                    onClick={() => setIsOpen(false)}
+                    className={`inline-flex items-center justify-center transition-all duration-300
+                    ${
+                      active
+                        ? "text-[#49c2bf] scale-110"
+                        : "text-[#49c2bf]/70 hover:text-[#49c2bf] hover:scale-105"
+                    }`}
+                  >
+                    <Icon size={26} />
+                  </Link>
 
-                {/* Tooltip */}
-                <span className="absolute left-16 top-1/2 -translate-y-1/2 bg-black text-white text-xs px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition">
-                  {link.name}
-                </span>
-              </motion.div>
-            );
-          })}
+                  {/* Tooltip */}
+                  <span className="absolute left-12 sm:left-14 top-1/2 -translate-y-1/2 bg-[#49c2bf] text-white text-xs px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition shadow-lg whitespace-nowrap pointer-events-none">
+                    {link.name}
+                  </span>
+                </motion.div>
+              );
+            })}
+          </div>
         </nav>
+
       </aside>
 
       {/* Spacer */}
-      <div className="hidden lg:block w-[90px]" />
+      <div className="hidden lg:block w-[70px] sm:w-[90px]" />
     </>
   );
 };

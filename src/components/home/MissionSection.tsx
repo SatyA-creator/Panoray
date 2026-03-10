@@ -9,7 +9,7 @@ const missionCards = [
 ];
 
 const MissionSection = () => (
-  <section className="py-12 lg:py-14 px-6 lg:px-8 relative bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+  <section className="py-12 lg:py-14 px-6 lg:px-8 relative bg-gradient-to-br from-teal-50 via-white to-cyan-50 overflow-hidden">
 
     <div className="max-w-7xl mx-auto">
 

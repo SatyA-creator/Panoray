@@ -20,7 +20,7 @@ const Footer = () => {
             <span className="text-3xl font-display font-bold text-white">
               Panoray<span className="text-white/90">.</span>
             </span>
-            <p className="mt-4 text-white/80 max-w-sm text-sm leading-relaxed">
+            <p className="mt-4 text-white/80 max-w-sm text-base leading-relaxed">
               Your Gateway to  Success. We provide equity financing to startups and early-stage companies with high growth potential.
             </p>
             <div className="mt-6 flex gap-3">
@@ -46,13 +46,13 @@ const Footer = () => {
           </div>
 
           <div className="md:col-span-3">
-            <h4 className="font-sans font-semibold text-white mb-5 text-xs uppercase tracking-widest">Navigate</h4>
+            <h4 className="font-sans font-semibold text-white mb-5 text-sm uppercase tracking-widest">Navigate</h4>
             <div className="space-y-3">
               {["Home", "Portfolio", "Partners", "Team", "Contact"].map((item) => (
                 <Link
                   key={item}
                   to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                  className="block text-sm text-white/80 hover:text-white hover:translate-x-1 transition-all duration-300"
+                  className="block text-base text-white/80 hover:text-white hover:translate-x-1 transition-all duration-300"
                 >
                   {item}
                 </Link>
@@ -61,13 +61,13 @@ const Footer = () => {
           </div>
 
           <div className="md:col-span-4">
-            <h4 className="font-sans font-semibold text-white mb-5 text-xs uppercase tracking-widest">Contact</h4>
-            <div className="space-y-4 text-sm text-white/80">
-              <a href="mailto:contact@panoray.com" className="flex items-center gap-3 hover:text-white transition-colors group">
+            <h4 className="font-sans font-semibold text-white mb-5 text-sm uppercase tracking-widest">Contact</h4>
+            <div className="space-y-4 text-base text-white/80">
+              <a href="mailto:info@panoray.com" className="flex items-center gap-3 hover:text-white transition-colors group">
                 <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
                   <Mail size={14} className="text-white" />
                 </div>
-                contact@panoray.com
+                info@panoray.com
               </a>
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center">
@@ -80,10 +80,10 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/20 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/70">
+          <p className="text-sm text-white/70">
             © {new Date().getFullYear()} Panoray Ventures. All rights reserved.
           </p>
-          <p className="text-xs text-white/60">
+          <p className="text-sm text-white/60">
             Built for the future.
           </p>
         </div>
