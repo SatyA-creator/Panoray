@@ -84,7 +84,7 @@ const HeroSection = () => {
           className="flex items-center justify-center order-first lg:order-last"
         >
           <motion.img
-            src="/logo_icon1.png"
+            src="/logo_icon.png"
             alt="Panoray Ventures Logo"
             className="w-full max-w-[180px] sm:max-w-[240px] lg:max-w-[300px] h-auto drop-shadow-2xl"
             animate={{
