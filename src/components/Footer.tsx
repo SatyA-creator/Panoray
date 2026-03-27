@@ -73,7 +73,7 @@ const Footer = () => {
                 <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center">
                   <MapPin size={14} className="text-white" />
                 </div>
-                Dubai, UAE
+                Dubai, UAE, London
               </div>
             </div>
           </div>
